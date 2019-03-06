@@ -1,33 +1,233 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('./fonts/Roboto-Light.eot'); /* IE9 Compat Modes */
+  src: url('./fonts/Roboto-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('./fonts/Roboto-Light.woff2') format('woff2'), /* Super Modern Browsers */
+       url('./fonts/Roboto-Light.woff') format('woff'), /* Pretty Modern Browsers */
+       url('./fonts/Roboto-Light.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-size: 1.6rem;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  line-height: 1.2;
+}
+h1,
+h2 {
+  font-weight: normal;
+  margin-top: 0;
+}
+h1 {
+  font-size: 3.6rem;
+  margin-bottom: 5rem;
+}
+h2,
+.h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.fontsize-5 {
+  font-size: 3.6rem;
+}
+.fontsize-4 {
+  font-size: 2.8rem;
+}
+.fontsize-3 {
+  font-size: 2.4rem;
+}
+.fontsize-2 {
+  font-size: 2rem;
+}
+.fontsize-1 {
+  font-size: 1.8rem;
+}
+.app-bg {
+  background: url('./images/bg.jpg') no-repeat;
+  background-size: cover;
+  height: 30rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.app-bg:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right:0;
+  height: 7.5rem;
+  z-index: 1;;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,000000+100&0+0,0.65+100 */
+  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+}
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background: #2E2E35;
+  color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 100vh;
+}
+.left-side,
+.right-side {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  z-index: 2;
+}
+.left-side {
+  max-width: 25%;
+  padding: 8rem 0;
+  text-align: center;
+  background: rgba(0,0,0,0.35);
+}
+.right-side {
+  max-width: 75%;
+  padding: 25rem 9rem 9rem;
+}
+.right-side > .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.right-side-img,
+.right-side-body {
+  -webkit-flex-basis: 0;
+  flex-basis: 0;
+  -webkit-flex-grow: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.right-side-body {
+  padding-left: 5rem;
+}
+.right-side-img {
+  max-width: 150px;
+}
+.right-side-img > img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+.app-logo {
+  margin-bottom: 13rem;
+}
+.blue-text {
+  color: #39D4FA;
+}
+.employee-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.employee-list > li {
+  transition: background .4s;
+}
+.employee-list > li:nth-child(2n+1) a {
+  color: #39D4FA;
+}
+.employee-list > li a {
+  display: block;
+  padding: 1rem;
+  color: inherit;
+  text-decoration: none;
+}
+.employee-list > li:hover,
+.employee-list > li.active
+ {
+  background: rgba(255,255,255,.25);
+}
+.right-side-img > img{
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+  border: solid 1px #ffffff;
+  border-radius: .3rem;
+}
+.right-side-text{
+  background: #1B1D24;
+  padding: 2rem 2.5rem;
+  border-radius: .5rem;
+}
+.right-side-text > p:last-child {
+  margin-bottom: 0;
+}
+.popularity {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  margin-bottom: 1.5rem;
+}
+.popularity > .rc-slider {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 1%;
+  margin: .5rem 0 0 2rem;
+}
+/* custom slider */
+.rc-slider .rc-slider-handle {
+  -webkit-box-shadow: 0px 0px 5x 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  border-color: transparent;
+}
+.rc-slider .rc-slider-handle:focus{
+  box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+  border-color: transparent;
+}
+.rc-slider .rc-slider-rail {
+  background-color: #1A1C23;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media only screen and (max-width: 767px) {
+  .left-side,
+  .right-side {
+    max-width: 100%;
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%;
   }
-  to {
-    transform: rotate(360deg);
+  .left-side {
+    padding-bottom: 4rem;
+  }
+  .right-side {
+    padding: 4rem 2rem;
+  }
+  .right-side > .inner {
+    display: block;
+  }
+  .right-side-img {
+    float: left;
+    margin-right: 2rem;
+    max-width: 12rem;
+  }
+  .right-side-body {
+    padding-left: 0;
+  }
+  h1,
+  .h1 {
+    font-size: 3rem;
+  }
+  .right-side-body .popularity {
+    padding-top: 3rem;
   }
 }
